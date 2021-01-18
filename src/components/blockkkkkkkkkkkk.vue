@@ -51,12 +51,31 @@
     </div>
     <div class = "Form-Group">
     <div class = "FormFirst">
-        <div class= "img-Flag">
-    </div>
+        <div class="FormAside">
+            <div class= "img-Flag">
+            </div>
+            <input type="text" id="name" placeholder="Name" required/>      
+            <input type="tel" name="tel" id="tel" placeholder="+7 (___) ___-__-__" required/>           
+            <div class = "butt">
+                <button class= "FormButton" >Кнопка с текстом</button>
+                <div class= "FormButton">
+                <button>Кнопка с текстом</button>
+                <div class= "FormButton1">
+                    
+            </div>
+        </div>
     </div>
     </div>
 </div>
 </template>
+
+<script>
+$('.popUp').click(function(){
+    if (this.offsetWidth - event.offsetX < 0) {
+		$('.popUp').addClass('close');
+    }
+});
+</script>
 
 <style scoped>
 .Content-wrapper {
@@ -200,19 +219,23 @@ span {
     height: 500px;
     background-color:#171a1f;
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.Content-Form-Group {
+    margin-right: 60vh;
+}
+.FormAside {
+    display: flex;
+    flex-direction: column;
 }
 .img-Flag {
     background-image: url('../assets/flag.png');
-    width: 350px;
-    height: 500px;
+    width: 20px;
+    height: 30px;
     background-repeat: no-repeat;
-    background-color: 100%;
-
-    
-}
-.Content-Form-Group {
- 
-    
-    margin-right: 60vh;
 }
 </style>
